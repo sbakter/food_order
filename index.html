@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Pancake Maker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="pancake.jpeg" alt="Delicious pancakes" />
+            <div class="price-banner"><span id="totalPrice">5€</span></div>
+        </div>
+        <div class="form-container">
+            <h2>Customize Your Pancake</h2>
+            <div class="form-group">
+                <label for="customerName">Your Name:</label>
+                <input type="text" id="customerName" placeholder="Enter your name" />
+            </div>
+            <div class="form-group">
+                <label for="type">Choose your pancake type:</label>
+                <select id="type">
+                    <option value="classic" data-price="5" data-name="Classic">
+                        Classic - 5€
+                    </option>
+                    <option value="chocolate" data-price="6" data-name="Chocolate">
+                        Chocolate - 6€
+                    </option>
+                    <option value="blueberry" data-price="7" data-name="Blueberry">
+                        Blueberry - 7€
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Select your toppings (1€ each):</p>
+                <div>
+                    <input type="checkbox" id="nuts" value="1" data-name="Nuts" data-category="toppings" />
+                    <label for="nuts">Nuts</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="bananas" value="1" data-name="Bananas" data-category="toppings" />
+                    <label for="bananas">Bananas</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="syrup" value="1" data-name="Syrup" data-category="toppings" />
+                    <label for="syrup">Syrup</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <p>Add extras:</p>
+                <div>
+                    <input type="checkbox" id="whippedCream" value="2" data-name="Whipped Cream"
+                        data-category="extras" />
+                    <label for="whippedCream">Whipped Cream - 2€</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="iceCream" value="3" data-name="Ice Cream" data-category="extras" />
+                    <label for="iceCream">Ice Cream - 3€</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <p>Choose your delivery option:</p>
+                <label><input type="radio" name="delivery" value="eat in" /> Eat In (No
+                    Charge)</label><br />
+                <label><input type="radio" name="delivery" value="pick up" /> Pick Up (No
+                    Charge)</label><br />
+                <label><input type="radio" name="delivery" value="delivery" /> Delivery
+                    (+5€)</label>
+            </div>
+            <button>Check order</button>
+            <div class="order-summary">
+                <h3>Order Summary:</h3>
+                <p><strong>Name:</strong> <span id="order_name">N/A</span></p>
+                <p><strong>Pancake Type:</strong> <span id="order_type">N/A</span></p>
+                <p>
+                    <strong>Toppings:</strong> <span id="order_toppings">None</span>
+                </p>
+                <p><strong>Extras:</strong> <span id="order_extras">None</span></p>
+                <p>
+                    <strong>Delivery Method:</strong>
+                    <span id="order_delivery">N/A</span>
+                </p>
+                <p><strong>Total Price:</strong> <span id="order_price">5€</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
